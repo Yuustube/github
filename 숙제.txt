@@ -1,0 +1,25 @@
+#수치해석
+숙제 ecampus
+
+#C++ 프로그래밍
+알고랩
+4주차 시험 
+https://modoocode.com/136
+
+#객체 숙제
+programmers
+
+#웹클라이언트컴퓨팅
+3월18일 과제
+책으로 정보찾기
+https://www.youtube.com/watch?v=_bh8ztMJIPE&list=PLuHgQVnccGMA9QQX5wqj6ThK7t2tsGxjm&index=15
+
+#일본어I
+3월 21일 시험
+CD 듣고 오기 
+
+#논리회로설계
+--------------------------------------
+Digital vs Analogue 차이
+Digital Logic Design이 무엇인가
+2진수 10진수

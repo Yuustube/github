@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int x;
+extern int y;
+extern int z;
+
+int main()
+{
+	extern int x;
+	
+	x = 10;
+	y = 20;
+	z = 30;
+	
+	return 0;
+	
+}
+
+int y;

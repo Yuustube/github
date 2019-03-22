@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std:
+
+int main()
+{
+	int number;
+	cout << "숫자를 입력하세요: ";
+	cin >> number;
+	switch (number) {
+	case 0:
+		cout <<"없읍\n";
+	case 1:
+		cout <<"하나\n";
+	case 2:
+		cout <<"둘\n";
+	default:
+		cout <<"많음\n";
+		break;
+	}
+	return 0;
+}

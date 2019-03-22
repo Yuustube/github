@@ -1,0 +1,4 @@
+#request.js
+pipe = stream
+createWriteStream 먼저 실행
+

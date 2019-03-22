@@ -1,0 +1,128 @@
+vhdr
+verylog
+
+digital vs analog
+
+Digital Signal
+-Discrete
+-Signal that can have one of a finite set of possible value
+
+Analog signal
+-Continous
+-Signal that can have one of an inifinite number of possible values
+
+저장과 전송
+
+
+
+digital : 쪼개고 대표값을 구한다
+
+sampling rate
+bit rate
+
+이산수학
+
+TV : 24hz
+HD : 60hz
+
+남을 가르킬 정도로 공부하자
+
+Abstraction
+복잡한거 쉽게 만들고 이식 가능하게 만들어라
+transparency 투명성을 제공한다 
+몰라도 되게 만들었다
+
+Boolean Algebra 사람의생각을 수학적으로 나타내는법
+
+수율 = 성공율
+
+Microprocessor = programming start
+
+데이터 한번저장 중복된걸 찾는다
+
+Run length encoding
+
+trade-off = A trade-off B
+if A goes better, B gets worse
+
+finding "optimization" is important
+
+슬라이드만 시험에 나오지 않는다
+
+명확한 목적이 있으면 optimization is successful
+목적에 따라 결정한다
+
+FPGA
+Micro Processing 시댄
+
+VHDA vs Verilog
+
+구글 started cpu on deep learning
+Hardware vs Computer (chip)
+
+16 bit and 64bit sampling rate 한번에 처리할수 있는 양
+
+logic gate + logic gate  = logic circuit digital, logic design
+continous math >> discrete math
+flash memory(안좋은 하드웨어에 똑똑한 소프트웨어를 만든다)> SK , Samsung 
+bread board
+
+32bit = 4 giga 2^2 * 2^20
+
+
+#19.03.19
+1 + 1 = 10 (carry)
+1 + 0 = 1 (overflow) = limit
+Developer needs to know whether overflow will happen or not.
+
+10 - 13 
+Steps
+1. 부호가 같은지 본다
+-같으면 더하고 똑같은 부호
+-틀리면 큰 수를 찾고 뺀다음 큰 부호를 쓴다
+Sign and Magnitude
+
+컴퓨터는 1의보수 2의보수로 계산한다 (Carry 가 발생하면 1을 더한다)
+Subtraction = 2의보수를 구해서 더한다
+
+Logic = 식 (Boolean) 쉐논
+사람의 생각 => 식 => 사람처럼 생각하는 컴퓨터 
+
+#19/03/21
+
+Dropbox, Amazon, Google
+-Cloud 기술
+분기, memory access
+
+Sign and Magnitude = 분기가 많아진다 = 안좋은 코드이다
+
+무어의 법칙
+
+true state
+
+전기는 장애물을 피해간다 (load 가 걸린다)
+
+진리표 = 모든 입력에 모든 결과를 보여준다
+-input 이 많아질수록 output이 힘들어진다
+
+G = input1 + t
+input1 = 다른 진리표가 들어있다
+
+Scalability = 무한 확장 가능한
+ -2배 3배까지는 할만하다
+ -linear or not
+
+Untractable
+ -^2 ^3으로 켜지면 nonscalable 하다
+
+모든 방법엔 scalable 한 방법이 필요하다.
+
+Logic Gate * n = Network	
+
+Cose <=> Quality, Performance (trade-off)
+
+게이트의 최소의 수와 게이트의 선의 수를 최소한으로 맞춘다
+
+Functional Equivalance = input and output are same
+
+Timing Diagram 중요

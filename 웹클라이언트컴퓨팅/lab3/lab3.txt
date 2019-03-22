@@ -1,0 +1,151 @@
+﻿---------------------
+(강의요약) 교재 6-7장
+---------------------
+
+(6장) 객체
+----------
+
+  1절 - 객체:                       object.js
+  5절 - 반복문:                     objectLoop.js
+  4절 - 생성자 함수와 프로토타입:   objectOriented.js
+
+
+
+(7장) 표준내장객체
+------------------
+
+  1절 - 자료형:       primitiveType.js, boxedType.js, methodToPrimitives.js, methodToObject.js
+  2절 - Number객체:   numberMethod.js, constructor.js
+  3절 - String객체:   stringMistake.js, solveStringMistake.js, stringIndexOf.js, stringSplit.js
+  4절 - Date객체:     newDate.js, dateAdd.js, dateInterval.js
+  5절 - Array객체:    arrayMethod.js, arraySort.js, newArrayMethod.js
+  4절 - Json객체:     jsonObject.js
+
+  (참조링크) https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_objects
+
+
+
+
+===========
+(실습준비)
+===========
+
+ --> 전세계 일기예보 사이트(api.openweathermap.org)에서 계정생성
+ --> <APP ID> 발급받아 보관/저장하여 예보서비스 API 호출시 사용 
+ --> 위 화면의 메뉴 중 <API> 폴더 클릭
+ --> "Current weather data" 및 "5 day / 3 hour forecast" 서비스에 대한 "API Doc"문서내용 숙지
+
+
+ --> 브라우저에서 다음 주소 입력실행
+
+       http://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&lang=kr&appid={APIKEY}
+       http://api.openweathermap.org/data/2.5/forcast?q=Busan&units=metric&lang=kr&appid={APIKEY}
+
+
+
+(HTTP command)
+--------------
+
+  GET
+
+
+(Response header)
+-----------------
+
+HTTP/1.1 200 OK
+Server: openresty
+Date: Thu, 14 Mar 2019 06:30:20 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 438
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?q=seoul&units=metric
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+
+
+(Response body)
+---------------
+
+{"coord":{"lon":126.98,"lat":37.57},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50d"}],"base":"stations","main":{"temp":8.72,"pressure":1021,"humidity":23,"temp_min":7,"temp_max":10},"visibility":10000,"wind":{"speed":2.6,"deg":190,"gust":5.1},"clouds":{"all":75},"dt":1552543080,"sys":{"type":1,"id":5509,"message":0.0077,"country":"KR","sunrise":1552513525,"sunset":1552556273},"id":1835848,"name":"Seoul","cod":200}
+
+
+
+(JSON -> Object 변환 후 출력결과)
+---------------------------------
+
+{ coord: { lon: 126.98, lat: 37.57 },
+  weather:
+   [ { id: 721, main: 'Haze', description: 'haze', icon: '50d' } ],
+  base: 'stations',
+  main:
+   { temp: 8.71,
+     pressure: 1021,
+     humidity: 21,
+     temp_min: 7,
+     temp_max: 10 },
+  visibility: 10000,
+  wind: { speed: 2.1, deg: 170 },
+  clouds: { all: 75 },
+  dt: 1552544400,
+  sys:
+   { type: 1,
+     id: 5509,
+     message: 0.0083,
+     country: 'KR',
+     sunrise: 1552513523,
+     sunset: 1552556274 },
+  id: 1835848,
+  name: 'Seoul',
+  cod: 200 }
+
+
+
+
+===========================================
+(실습3) "whether_forcast.js" 프로그램 구현
+===========================================
+
+(환경설정)
+----------
+  "lab3" 실습폴더에 가상대학에서 다운받은 압축파일을 해제하고
+  현 위치에서 코맨드창을 열어 다음 명령어 실행
+
+    > npm install request
+    > npm install najax
+
+
+
+ (실습3-1)
+ ---------
+    0) "najax_get.js"을 수정하여 "najax_forcast.js"를 다음과 같이 완성
+    1) 위의 <openweathermap>사이트에서 현재시간('whether' API 사용)의 서울날씨를 요청
+    2) 도착한 응답메시지(JSON포맷)를 자바스크립트객체로 변환
+    3) 객체안의 서울날씨정보를 분석하여 도시이름, 소속국가이름, 날씨상황, 
+          오늘의 평균온도, 최대온도, 최저온도, 풍속, 습도를 콘솔에 출력
+
+
+ (실습3-2)
+ ---------
+    0) "request.js"을 수정하여 "request_forcast.js"를 다음과 같이 완성
+    1) 위의 <openweathermap>사이트에 부산의 5일간/3시간간격 일기예보('forcast' API 사용)를 요청
+    2) 도착한 응답메시지(JSON포맷)를 자바스크립트객체로 변환
+    3) 객체안의 서울날씨정보를 분석하여 도시이름, 소속국가이름, 날씨상황, 
+          오늘의 평균온도, 최대온도, 최저온도, 풍속, 습도를 콘솔에 출력
+
+
+
+
+(결과제출) 
+----------
+  다음주 월요일 수업시간(3월25일오후4시)까지 완성프로그램들을 
+  가상대학에 제출.
+
+  제출대상: "najax_forcast.js"와 "request_forcast.js"를 "lab3_solution.zip"으로 압축/업로드.
+
+
+
+(평가방법)
+----------
+  수업시간 중 평가결과 확인

@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+
+void get_random(int n)
+{
+	int i;
+	for(i = 0; i < n; i++ )
+		cout << rand() << endl;
+}
+
+int main()
+{
+	srand( (unsinged)) time( NULL ));
+	get_randome(10);
+	
+	return 0;
+	
+}

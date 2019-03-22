@@ -1,0 +1,14 @@
+package kr.ac.kookmin.cs.oop.ch1;
+
+public class Hello {
+	
+
+	public static void main(String[] args) {
+		int n = 21;
+		System.out.println("내 나이는 " + n);
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}

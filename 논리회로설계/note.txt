@@ -110,7 +110,7 @@ input1 = 다른 진리표가 들어있다
 
 Scalability = 무한 확장 가능한
  -2배 3배까지는 할만하다
- -linear or not
+ -linear or non-linear
 
 Untractable
  -^2 ^3으로 켜지면 nonscalable 하다
@@ -126,3 +126,35 @@ Cose <=> Quality, Performance (trade-off)
 Functional Equivalance = input and output are same
 
 Timing Diagram 중요
+
+
+#19/3/26
+Instruction Set = cpu has its own structure
+
+성능 <=> 전력 trade-off and optimization
+
+CPU reads memory and runs 
+
+메모리 ( ,data
+
+존 폰 노이만 아키텍처 = 순서대로 (control flow computer) = not scalable for massive parallel execution op. dataflow
+
+CPU <= *연산기(ALU) <= control unit <= input <= memory(명령어 + data)
+
+Register Bank = CPU 와 가장 가까운 data 를 담고 있는곳
+
+First half = Combinational Logic(기억을 못함) 
+Second half = Sequential Logic (상태 기억)
+
+출력으로 나간걸 다시 입력으로 넣는다 (feedback) = 기억을 할수 있느냐 없느냐 차이를 만든다.
+
+C(in) = Carry in
+
+S = A + B + C
+exclusive or (다를때만 1이 나오는)
+
+Implicant : literal 의 곱
+
+진리표
+1. 오른쪽에 1을 구한다
+2. 최소한을 구한다 (simplification or optimization)

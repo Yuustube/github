@@ -1,0 +1,91 @@
+﻿---------------------
+(강의요약) 교재 
+---------------------
+
+(9장) Node.js 기본
+------------------
+
+ 1절 전역변수:         globalVariable.js
+ 2절 process:          process.js
+ 3절 process이벤트:    processEvent.js, exitEventArguments.js
+ 4절 os모듈:           os.js
+ 5절 url모듈:          url.js
+ 6절 file system모듈:  syncRead.js, asyncRead.js, syncWrite.js, asyncWrite.js
+                       syncException.js, asyncException.js
+ 8절 request모듈:      > npm install request  
+                       request.js
+ 9절 cheerio모듈:      > npm install cheerio
+                       cheerio.js
+10절 async모듈:        > npm install async
+                       async.js
+
+
+
+(10장) express 모듈
+-------------------
+
+ 2절 기본서버 생성/실행:  basicServer.js
+ 3절 페이지 라우팅:       basicRoute.js
+ 4절 요청/응답:           responseBasic.js, mimeType.js, notFound.js, 
+                          redirect.js, requestQuery.js
+ 5절 미들웨어:            > npm install morgan body-parser 
+                          staticFile.js, morgan.js, body.js
+
+
+
+
+===========
+(실습준비)
+===========
+
+ 1) node서버에서 크롤링처리(movie_crawling.js)
+
+  > mkdir lab4
+  > npm install request cheerio iconv-lite
+  > node movie_crawling_lite.js
+
+
+ (혹은, 노트북에 Python2.7(버전중요)이 기설치된 경우)
+
+
+  > mkdir lab4
+  > npm install request cheerio iconv
+  > node movie_crawling.js
+
+
+
+
+ 2) node서버에서 브라우저 출력(movieServer.js)
+
+  > node movieServer.js
+
+  --> 브라우저에서 다음 주소 입력실행함
+
+         http://127.0.0.1:52273/
+
+
+
+
+
+============================================
+(실습4) 크롤링/스크레이핑/결과출력 기능 구현
+============================================
+
+    "movie_crawling.js"과 "movieServer.js"을 참조하여 네이버 금주의 영화 50편 
+     정보를 가져와 순위, 포스트이미지, 제목, 예매율, 개요, 감독, 출연 정보를 
+     출력하는 프로그램("movieRank50.js")을 완성하라. 
+
+
+
+(결과제출) 
+----------
+  다음주 월요일 수업시간(3월25일오후4시)까지 완성프로그램들을 
+  가상대학에 제출.
+
+  제출대상: ""을 "lab4_solution.zip"으로 압축하여 업로드.
+
+
+
+(평가방법)
+----------
+  수업시간 중 평가결과 확인

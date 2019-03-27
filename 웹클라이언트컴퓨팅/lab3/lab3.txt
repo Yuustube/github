@@ -38,8 +38,8 @@
 
  --> 브라우저에서 다음 주소 입력실행
 
-       http://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&lang=kr&appid={APIKEY}
-       http://api.openweathermap.org/data/2.5/forcast?q=Busan&units=metric&lang=kr&appid={APIKEY}
+       http://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&lang=kr&appid=12b1a10d2f79b0171cc04d5cc83408df
+       http://api.openweathermap.org/data/2.5/forecast?q=Busan&units=metric&lang=kr&appid=12b1a10d2f79b0171cc04d5cc83408df
 
 
 

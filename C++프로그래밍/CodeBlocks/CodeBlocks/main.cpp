@@ -1,21 +1,10 @@
 #include <iostream>
-#include <cmath>
-#include <ctime>
-#include <cstdlib>
+#include <string>
 using namespace std;
 
-void get_random(int n)
-{
-	int i;
-	for(i = 0; i < n; i++ )
-		cout << rand() << endl;
-}
+int main(){
+    char a[] = {'i', 'a', 'm', 'K','I', 'm'};
 
-int main()
-{
-	srand((unsigned)time(NULL));
-	get_random(10);
-
-	return 0;
-
+    cout << sizeof(a) << endl;
+    cout << sizeof(a) << endl;
 }

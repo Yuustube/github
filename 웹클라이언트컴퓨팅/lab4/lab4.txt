@@ -1,5 +1,5 @@
 ﻿---------------------
-(강의요약) 교재 
+(강의요약) 교재
 ---------------------
 
 (9장) Node.js 기본
@@ -12,7 +12,7 @@
  5절 url모듈:          url.js
  6절 file system모듈:  syncRead.js, asyncRead.js, syncWrite.js, asyncWrite.js
                        syncException.js, asyncException.js
- 8절 request모듈:      > npm install request  
+ 8절 request모듈:      > npm install request
                        request.js
  9절 cheerio모듈:      > npm install cheerio
                        cheerio.js
@@ -26,9 +26,9 @@
 
  2절 기본서버 생성/실행:  basicServer.js
  3절 페이지 라우팅:       basicRoute.js
- 4절 요청/응답:           responseBasic.js, mimeType.js, notFound.js, 
+ 4절 요청/응답:           responseBasic.js, mimeType.js, notFound.js,
                           redirect.js, requestQuery.js
- 5절 미들웨어:            > npm install morgan body-parser 
+ 5절 미들웨어:            > npm install morgan body-parser
                           staticFile.js, morgan.js, body.js
 
 
@@ -71,15 +71,15 @@
 (실습4) 크롤링/스크레이핑/결과출력 기능 구현
 ============================================
 
-    "movie_crawling.js"과 "movieServer.js"을 참조하여 네이버 금주의 영화 50편 
-     정보를 가져와 순위, 포스트이미지, 제목, 예매율, 개요, 감독, 출연 정보를 
-     출력하는 프로그램("movieRank50.js")을 완성하라. 
+    "movie_crawling.js"과 "movieServer.js"을 참조하여 네이버 금주의 영화 50편
+     정보를 가져와 순위, 포스트이미지, 제목, 예매율, 개요, 감독, 출연 정보를
+     출력하는 프로그램("movieRank50.js")을 완성하라.
 
 
 
-(결과제출) 
+(결과제출)
 ----------
-  다음주 월요일 수업시간(3월25일오후4시)까지 완성프로그램들을 
+  다음주 월요일 수업시간(3월25일오후4시)까지 완성프로그램들을
   가상대학에 제출.
 
   제출대상: ""을 "lab4_solution.zip"으로 압축하여 업로드.

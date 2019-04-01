@@ -1,39 +1,45 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-void outputZigZag(int n, int k);
+int closestNumber(int n, int m);
 int main(void)
 {
 int t;
-int n, k;
+int n, m;
     cin >> t;
     for(int i=0; i<t; i++)
 {
-        cin >> n >> k;
-        outputZigZag( n, k );
+        cin >> n >> m;
+        cout << closestNumber( n, m ) << endl;
     }
     return 0;
 }
-void outputZigZag(int n, int k)
+int closestNumber(int n, int m)
 {
-    if(n % 2 != 0){
-    cout << k;
-            int m = k;
-        for(int j = 1; j < k; j++){
-            cout << "*" << m + (n-j);
-            m = m + (n-j);
-
-
-        }
+    int count1 = 0;
+    int count2 = m;
+    if(n % m == 0){
+        return n;
         cout << endl;
-}
-    else{
-        cout << k;
-            int m = k;
-        for(int j = 1; j < k; j++){
-            cout << "*" << m + (n-j);
-            m = m + (n-j);
-
-        }
     }
-        cout << endl;
+    else if(n > 0){
+        for(int i = n - m; i < n + m + 1; i++){
+            if(i % m == 0 && abs(i - n) <= abs(count2)){
+                count1 = i;
+                count2 = abs(i - n);
+            }
+        }
+       return count1;
+    }
+
+    else if(n < 0){
+        for(int i = n + m; i < n - m; i++){
+            if(i % m == 0 && abs(i - n) < abs(count2));
+                count1 = i;
+                count2 = abs(i - n);
+        }
+        return count1;
+    }
+
+
 }

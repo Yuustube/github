@@ -176,7 +176,7 @@ m1 + m3
 POS = maxterm의 곱
 =M0 * M2
 
-디모르간의 법칙
+드 모르간의 법칙
 
 Logic expression <=> Logic Circuit
 
@@ -184,7 +184,7 @@ A
 B      and gate   or gate
 C
 
-Axion or theorems = 증명할 필요 없는것들
+Axiom or theorems = 증명할 필요 없는것들
 duality <=> 드모르간의 법칙
 
 Dual = 바꿔도 참의 관계

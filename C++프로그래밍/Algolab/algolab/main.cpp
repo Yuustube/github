@@ -1,27 +1,39 @@
 #include <iostream>
 using namespace std;
-int angleClock(int h, int m);
+void outputZigZag(int n, int k);
 int main(void)
 {
 int t;
-int h, m;
+int n, k;
     cin >> t;
     for(int i=0; i<t; i++)
 {
-        cin >> h >> m;
-        cout << angleClock( h, m ) << endl;
+        cin >> n >> k;
+        outputZigZag( n, k );
     }
     return 0;
 }
+void outputZigZag(int n, int k)
+{
+    if(n % 2 != 0){
+    cout << k;
+            int m = k;
+        for(int j = 1; j < k; j++){
+            cout << "*" << m + (n-j);
+            m = m + (n-j);
 
-int angleClock(int h, int m){
-    int a = (h*30) + (m*1/2);
-    int b = m * 6;
-    if(a > b){
-        return a - b;
-    }
+
+        }
+        cout << endl;
+}
     else{
-        return b - a;
-    }
+        cout << k;
+            int m = k;
+        for(int j = 1; j < k; j++){
+            cout << "*" << m + (n-j);
+            m = m + (n-j);
 
+        }
+    }
+        cout << endl;
 }

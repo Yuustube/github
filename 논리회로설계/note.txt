@@ -190,3 +190,11 @@ duality <=> 드모르간의 법칙
 Dual = 바꿔도 참의 관계
 
 Analysis and Synthesis?
+
+카르노 맵
+
+IFTTT
+
+Algebric Simplication
+
+Fewest largest circle

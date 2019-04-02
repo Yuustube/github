@@ -15,25 +15,23 @@ int n, k;
 }
 void outputZigZag(int n, int k)
 {
-    if(n % 2 != 0){
-    cout << k;
-            int m = k;
-        for(int j = 1; j < k; j++){
-            cout << "*" << m + (n-j);
-            m = m + (n-j);
-
-
+    if(k % 2 != 0){
+        int a = k;
+        cout << a;
+    for(int i = 0; i < k-1; i++){
+        cout << "*" << a + 1;
+        a++;
         }
         cout << endl;
-}
-    else{
-        cout << k;
-            int m = k;
-        for(int j = 1; j < k; j++){
-            cout << "*" << m + (n-j);
-            m = m + (n-j);
-
-        }
     }
+    else{
+        int a = k+k;
+        cout << a;
+    for(int i = k; i > 1; --i){
+        cout << "*" << a - 1;
+        --a;
+        }
         cout << endl;
+    }
 }
+

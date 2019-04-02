@@ -154,7 +154,7 @@ S = A + B + C
 exclusive or (다를때만 1이 나오는)
 
 Implicant : literal 의 곱
-
+minterm
 진리표
 1. 오른쪽에 1을 구한다
 2. 최소한을 구한다 (simplification or optimization)
@@ -168,7 +168,7 @@ Logic expression = literal and expression has to be minimized
 *Logic Circuite
 
 Sum of Product = minterm의 합
-
+츨력이 1인값
 SOP = ABC + AB'C + AB'C' 
  = Logic expression 
 m1 + m3
@@ -188,3 +188,5 @@ Axion or theorems = 증명할 필요 없는것들
 duality <=> 드모르간의 법칙
 
 Dual = 바꿔도 참의 관계
+
+Analysis and Synthesis?

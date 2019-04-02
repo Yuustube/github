@@ -1,4 +1,14 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1554102337 source:c:\users\yuustube\github\c++프로그래밍\algolab\algolab\main.cpp
+=======
+1554139845 source:c:\users\yuustube\github\c++프로그래밍\algolab\algolab\main.cpp
+>>>>>>> 5b87a6919b80790fb420edacc25d3560d4fae040
 	<iostream>
+	<cmath>
+
+1554135539 source:c:\users\yuustube\github\c++프로그래밍\algolab\algolab\src\asdf.cpp
+	"asdf.h"
+
+1554135539 c:\users\yuustube\github\c++프로그래밍\algolab\algolab\include\asdf.h
 

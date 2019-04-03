@@ -1,67 +1,68 @@
-#include <iostream>
-#include <cmath>
+/*#include <iostream>
 using namespace std;
-int closestNumber(int n, int m);
+
 int main(void)
 {
-int t;
-int n, m;
+    int t;
+    int n;
     cin >> t;
-    for(int i=0; i<t; i++)
-{
-        cin >> n >> m;
-        cout << closestNumber( n, m ) << endl;
+
+    for(int i = 0; i < t; i++){
+            cin >> n;
+        for(int j = 0; j < 9; j++){
+            if(n % 10 != 0){
+                cout << n % 10;
+            }
+            n = n / 10;
+        }
+        cout << endl;
     }
+
     return 0;
+
 }
-int closestNumber(int n, int m)
+
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main(void)
 {
-<<<<<<< HEAD
-    if(k % 2 != 0){
-        int a = k;
-        cout << a;
-    for(int i = 0; i < k-1; i++){
-        cout << "*" << a + 1;
-        a++;
+    int t;
+    int n;
+    int k;
+    int maxi = 0;
+    int sum = 0;
+    int num = 0;
+    cin >> t;
+    cin >> n;
+    int a[n];
+    for(int i = 0; i < t; i++){
+        for(int j = 0; j < n; j++){
+            cin >> k;
+            a[j] = k;
         }
-        cout << endl;
-    }
-    else{
-        int a = k+k;
-        cout << a;
-    for(int i = k; i > 1; --i){
-        cout << "*" << a - 1;
-        --a;
-        }
-        cout << endl;
-    }
-=======
-    int count1 = 0;
-    int count2 = m;
-    if(n % m == 0){
-        return n;
-        cout << endl;
-    }
-    else if(n > 0){
-        for(int i = n - m; i < n + m + 1; i++){
-            if(i % m == 0 && abs(i - n) <= abs(count2)){
-                count1 = i;
-                count2 = abs(i - n);
+        for(int k = 0; k < n; k++){
+            if(a[k] > maxi){
+                maxi = a[k];
+                num = k;
             }
         }
-       return count1;
-    }
+        for(int m = 0; m < n; m++){
+            if(num != m){
+                sum = sum + a[m];
+            }
 
-    else if(n < 0){
-        for(int i = n + m; i < n - m; i++){
-            if(i % m == 0 && abs(i - n) < abs(count2));
-                count1 = i;
-                count2 = abs(i - n);
         }
-        return count1;
+        if(maxi > sum){
+            cout << num +1 << endl;
+        }
+        else{
+            cout << 0 << endl;
+        }
     }
+    return 0;
 
-
->>>>>>> 5b87a6919b80790fb420edacc25d3560d4fae040
 }
-

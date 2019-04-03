@@ -1,0 +1,80 @@
+﻿---------------------
+(강의요약) 교재 
+---------------------
+
+(11장) 미니 프로젝트- RESTful 웹 서비스
+---------------------------------------
+
+ REST API 서버:        app_fetch.js
+ REST API 테스트도구:  REST API 
+
+   (*) https://www.getpostman.com/downloads/ 에서 다운로드/설치할 것
+ 
+
+
+(12장) 웹 브라우저의 자바스크립트
+---------------------------------
+
+ 3절 window 객체:            alert.html
+ 4절 location/history 객체:  location.html
+ 5절 navigator 객체:         navigator.html
+
+
+
+(13장) 문서 객체 모델
+---------------------
+
+ 3절 문서객체선택: GetElementById.html, QuerySelector.html, 
+                    QuerySelectorAll.html
+ 4절 문서객체조작: InnerHTML.html, Escape.html, Style.html, 
+                    StandardAttribute.html, CustomAttribute.html
+ 5절 이벤트:       inline1.html, inline2.html, traditional.html
+                    eventObject1.html, eventObject2.html, defaultEvent.html
+
+
+
+
+===========
+(실습준비)
+===========
+
+ 1) REST API 서버 실행
+
+  > mkdir lab5
+  > npm install express body-parser
+  > node app_fetch.js
+
+  --> "REST API "앱 실행 -> REST API 기능테스트(GET,POST,PUT,DELETE)
+
+
+
+
+=======
+(실습5)
+=======
+
+    1) "app_fetch.js"이 제공하는 모든 REST API기능을 테스트할 수 있도록
+        "rest.html"을 완성하라.
+
+    2) 사용자(user) 데이터에 학번(studentID)를 추가하여 다음과 같은
+        프리미엄 서비스를 구현하라.
+
+          - REST API 전 기능에서 학번 데이터의 정상처리
+          - 이름 혹은 학번으로 데이터를 검색하여 화면에 출력하는 기능
+          - 지역(region)으로 검색시, 해당 데이터들을 모두 찾아 출력
+          - 이름 혹은 학번으로 데이터 검색하여 새 데이터로 덮어 씌우기
+          - 이름 혹은 학번으로 데이터 검색하여 해당 데이터 삭제
+
+
+(결과제출) 
+----------
+  수업시간(4월20일오후4시)까지 완성프로그램들을 
+  가상대학에 제출.
+
+  제출대상: 완성된 "app_fetch.js"와 "rest.html"을 압축하여 업로드.
+
+
+
+(평가방법)
+----------
+  수업시간 중 평가결과 확인

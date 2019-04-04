@@ -198,3 +198,12 @@ IFTTT
 Algebric Simplication
 
 Fewest largest circle
+ 
+
+#2019-04-04
+2 4 8 = 변수를 없앨수 있다
+
+essential prime implicant
+non-essential prime implicant (optional)
+
+don't care 최적화에 관련있다

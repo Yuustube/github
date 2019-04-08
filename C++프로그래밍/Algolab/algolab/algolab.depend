@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-<<<<<<< HEAD
-1554102337 source:c:\users\yuustube\github\c++프로그래밍\algolab\algolab\main.cpp
-=======
-1554139845 source:c:\users\yuustube\github\c++프로그래밍\algolab\algolab\main.cpp
->>>>>>> 5b87a6919b80790fb420edacc25d3560d4fae040
+163401760 <<<<<<< HEAD
+
+1554699875 source:c:\users\yuustube\github\c++프로그래밍\algolab\algolab\main.cpp
+	<iostream>
+
+1554139845 7a6919b80790fb420edacc25d3560d4fae040
 	<iostream>
 	<cmath>
 

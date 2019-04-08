@@ -6,7 +6,7 @@ const app = express();
 app.use((request, response) => {
 // 데이터소스: https://movie.naver.com/movie/running/current.nhn
     let output = ""
-
+    
     output += "<style>";
     output += ".row { width: 990px; text-align: left; margin-top: -10px; margin-bottom: -10px; }";
     output += ".block {  width: 330px; vertical-align: middle; display: inline-block; line-height: 7px; }​";

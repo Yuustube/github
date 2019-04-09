@@ -5,6 +5,9 @@ const iconv = require('iconv-lite');
 let titles = new Array();
 let images = new Array();
 let genres = new Array();
+let reserves = new Array();
+let directors = new Array();
+let actors = new Array();
 
 let url = "https://movie.naver.com/movie/running/current.nhn";
 
@@ -27,11 +30,17 @@ request({url, encoding: null}, function(error, response, body){
             genre += $(this).text() +', '; });
         genre = genre.substring(0, genre.length-2);
         genres[i] = genre;
-        //let reserve = $(`div.lst_wrap > ul > li:nth-child(${i+1}); //> dl > dd:nth-child(${1}) > dd:nth-child(${1}) > dl:nth-child(${2}) > dd > div > span:nth-child(${1})`).text();
-        //console.log(reserve)
+        let reserve = $(`div.lst_wrap > ul > li:nth-child(${i+1}) > dl > dd.star > dl.info_exp > dd > div > span.num`).text();
+        reserves[i] = reserve;
+        let director = $(`div.lst_wrap > ul > li:nth-child(${i+1}) > dl > dd > dl.info_txt1 > dd:nth-child(4) > span.link_txt > a`).text();
+        directors[i] = director;
+        let actor = $(`div.lst_wrap > ul > li:nth-child(${i+1}) > dl > dd > dl.info_txt1 > dd:nth-child(6) > span.link_txt > a:nth-child(1)`).text();
+        actors[i] = actor;
+
 
       }
 
+      //console.log(reserves)
       //console.log(title)
 
     //console.log(resultArr)
@@ -65,10 +74,10 @@ app.use((request, response) => {
       output += "</div>";
       output += "<div class='block'>";
       output += "<h5>제목: " + titles[i]  + " </h5>";
-      output += "<h5>예매율: 53.29%</h5>";
+      output += "<h5>예매율: " + reserves[i] + "%</h5>";
       output += "<h5>개요: "+ genres[i] +"</h5>";
-      output += "<h5>감독: 박누리</h5>";
-      output += "<h5>출연: 류준열, 유지태, 조우진</h5>";
+      output += "<h5>감독: "+ directors[i] +"</h5>";
+      output += "<h5>출연: "+ actors[i] +"</h5>";
       output += "</div>";
       output += "</div>";
       output += "<hr/>";

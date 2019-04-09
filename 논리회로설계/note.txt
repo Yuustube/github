@@ -207,3 +207,5 @@ essential prime implicant
 non-essential prime implicant (optional)
 
 don't care 최적화에 관련있다
+
+Local Optimal vs Global Optimal

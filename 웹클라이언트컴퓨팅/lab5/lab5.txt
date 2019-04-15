@@ -6,7 +6,7 @@
 ---------------------------------------
 
  REST API 서버:        app_fetch.js
- REST API 테스트도구:  REST API 
+ REST API 테스트도구:  Postman 
 
    (*) https://www.getpostman.com/downloads/ 에서 다운로드/설치할 것
  
@@ -26,10 +26,25 @@
 
  3절 문서객체선택: GetElementById.html, QuerySelector.html, 
                     QuerySelectorAll.html
- 4절 문서객체조작: InnerHTML.html, Escape.html, Style.html, 
-                    StandardAttribute.html, CustomAttribute.html
+ 4절 문서객체조작: InnerHTML.html, Escape.html, *Style.html, 
+                    *StandardAttribute.html, CustomAttribute.html
  5절 이벤트:       inline1.html, inline2.html, traditional.html
                     eventObject1.html, eventObject2.html, defaultEvent.html
+
+
+
+(14장) jQuery
+-------------
+
+ 1절 jQuery사용준비:    *Ready/HTMLPage.html, Ready.html, 
+ 2절 jQuery객체:        *ReadyMethod.html, 
+ 4절 문서객체개별조작:  *jQueryLoopA.html, jQueryLoopB.html
+ 5절 문서객체조작:      *GetTextAndHtml.html, SetTextAndHtml.html
+                         jQueryStyle.html, *jQueryAttr.html
+ 6절 문서객체생성:      CreateElement.html
+ 7절 이벤트:            DirectEvent.html, RedirectEvent.html
+                         RemoveEvent.html
+ 8절 애니메이션:        Animate.html
 
 
 
@@ -41,10 +56,15 @@
  1) REST API 서버 실행
 
   > mkdir lab5
+  > cd lab5
   > npm install express body-parser
   > node app_fetch.js
 
-  --> "REST API "앱 실행 -> REST API 기능테스트(GET,POST,PUT,DELETE)
+  --> "REST API "앱 실행 
+
+          --> <Postman> 앱을 사용하여 REST API 기능테스트(GET,POST,PUT,DELETE)
+
+          --> (서버주소)  "http://127.0.0.1:52273"
 
 
 
@@ -53,10 +73,17 @@
 (실습5)
 =======
 
-    1) "app_fetch.js"이 제공하는 모든 REST API기능을 테스트할 수 있도록
-        "rest.html"을 완성하라.
+    1) "lab5\public\PollUpdate.html"을 "lab5\public\rest.html"로 복사하라.
 
-    2) 사용자(user) 데이터에 학번(studentID)를 추가하여 다음과 같은
+    2) 다음 주소로 실습을 진행한다.
+
+          http://127.0.0.1:52273/rest.html
+
+
+    3) (실습5-1: 50점) "app_fetch.js"이 제공하는 모든 REST API기능을 테스트할 
+        수 있도록 "rest.html"을 작성하라.
+
+    4) (실습5-2: 50점) 사용자(user) 데이터에 학번(studentID)를 추가하여 다음과 같은
         프리미엄 서비스를 구현하라.
 
           - REST API 전 기능에서 학번 데이터의 정상처리
@@ -68,8 +95,7 @@
 
 (결과제출) 
 ----------
-  수업시간(4월20일오후4시)까지 완성프로그램들을 
-  가상대학에 제출.
+  수업시간(4월17일오후4시)까지 완성프로그램들을 가상대학에 제출.
 
   제출대상: 완성된 "app_fetch.js"와 "rest.html"을 압축하여 업로드.
 

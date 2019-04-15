@@ -14,8 +14,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('public'));
 
 // 변수를 선언합니다.
-let userCounter = 0;
-const users = [];
+let userCounter = 1;
+const users = [{id : 0, name : '홍길동', region : '청주'}];
 // 라우트합니다.
 app.get('/user', (request, response) => {
     response.send(users);

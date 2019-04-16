@@ -46,21 +46,22 @@
             });
 
             $('#put').click(function () {
-            	var myvalue = $(":input:radio[name=choice]:checked").val();
+            	/*var myvalue = $(":input:radio[name=choice]:checked").val();
             	var mycolor = (myvalue=='1') ? '#00ff00' :
-            		          (myvalue=='2') ? '#0000ff' : '#ff0000';
+            		          (myvalue=='2') ? '#0000ff' : '#ff0000';*/
                 $.ajax({
-                    url: '/poll',
+                    url: '/user',
                     type: 'put',
                     headers: {
                         'Accept': 'application/json',
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/x-www-form-urlencoded'
                     },
                     dataType: 'text',
-                    data: JSON.stringify({
+                    data: {
                       name: $('#name').val(),
-                      color: $('#region').val()
-                    }),
+                      region: $('#region').val(),
+                      id: $('#id').val()
+                    },
                     success: function (data) {
                         $('#output').val(data);
                     }
@@ -69,16 +70,17 @@
 
             $('#delete').click(function () {
                 $.ajax({
-                    url: '/poll',
+                    url: '/user',
                     type: 'delete',
                     headers: {
                         'Accept': 'application/json',
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/x-www-form-urlencoded'
                     },
                     dataType: 'text',
                     data: {
                         name: $('#name').val(),
-                        color: $('#color').val(),
+                        region: $('#region').val(),
+                        id: $('#id').val()
                     },
                     success: function (data) {
                         $('#output').val(data);

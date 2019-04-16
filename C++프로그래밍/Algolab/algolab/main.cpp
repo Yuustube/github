@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+<<<<<<< HEAD
 int lengthOfIntervalIntersection(int a, int b, int c, int d);
 int main(void)
 {
@@ -33,4 +34,19 @@ int lengthOfIntervalIntersection(int a, int b, int c, int d)
         }
     }
     return count;
+=======
+
+int mode;
+void message()
+{
+    cout << "전역 공간 안의 message()" << endl;
+}
+
+namespace Graphics {
+    int mode;
+    int x,y;
+    void draw() { cout << "Graphics 이름 공간 안의 draw()" << endl;};
+    void message(){ cout << "Graphics 이름 공간 안의 message()" << endl;};
+
+>>>>>>> 6e1186571333cad0a36760fb95499936fb4c88c3
 }

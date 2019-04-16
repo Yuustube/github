@@ -22,9 +22,9 @@
             	var mycolor = (myvalue=='1') ? '#00ff00' :
             		        (myvalue=='2') ? '#0000ff' : '#ff0000';*/
             	console.log(JSON.stringify({
+                    id: $('#id').val(),
                     name: $('#name').val(),
                     region: $('#region').val(),
-                    id: $('#id').val()
                 }));
                 $.ajax({
                     url: '/user',
@@ -35,9 +35,10 @@
                     },
                     dataType: 'text',
                     data: {
+                      id: $('#id').val(),
                       name: $('#name').val(),
-                      region: $('#region').val(),
-                      id: $('#id').val()
+                      region: $('#region').val()
+
                     },
                     success: function (data) {
                         $('#output').val(data);
@@ -49,18 +50,20 @@
             	/*var myvalue = $(":input:radio[name=choice]:checked").val();
             	var mycolor = (myvalue=='1') ? '#00ff00' :
             		          (myvalue=='2') ? '#0000ff' : '#ff0000';*/
+                var id = $('#id').val();
                 $.ajax({
-                    url: '/poll',
+                    url: '/user/' + id,
                     type: 'put',
                     headers: {
                         'Accept': 'application/json',
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/x-www-form-urlencoded'
                     },
                     dataType: 'text',
-                    data: JSON.stringify({
-                      name: $('#name').val(),
-                      color: $('#region').val()
-                    }),
+                    data: {
+                        id: $('#id').val(),
+                        name: $('#name').val(),
+                        region: $('#region').val(),
+                    },
                     success: function (data) {
                         $('#output').val(data);
                     }

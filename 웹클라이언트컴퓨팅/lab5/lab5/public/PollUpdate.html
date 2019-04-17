@@ -50,14 +50,10 @@
             	/*var myvalue = $(":input:radio[name=choice]:checked").val();
             	var mycolor = (myvalue=='1') ? '#00ff00' :
             		          (myvalue=='2') ? '#0000ff' : '#ff0000';*/
-<<<<<<< HEAD
-                $.ajax({
-                    url: '/user',
-=======
+
                 var id = $('#id').val();
                 $.ajax({
                     url: '/user/' + id,
->>>>>>> f6ea2bd159ea4a9a5cbec1d1ef03533092a0afb4
                     type: 'put',
                     headers: {
                         'Accept': 'application/json',
@@ -65,15 +61,10 @@
                     },
                     dataType: 'text',
                     data: {
-<<<<<<< HEAD
-                      name: $('#name').val(),
-                      region: $('#region').val(),
-                      id: $('#id').val()
-=======
                         id: $('#id').val(),
                         name: $('#name').val(),
                         region: $('#region').val(),
->>>>>>> f6ea2bd159ea4a9a5cbec1d1ef03533092a0afb4
+
                     },
                     success: function (data) {
                         $('#output').val(data);

@@ -1,0 +1,13 @@
+시험: 4월 22일, 오후3시, 445호
+
+문제 10개
+
+1. 삼항연산자: ?:
+
+2. 초기화조건문: 5장, initSimple.ks
+
+3.타이머: 시작, 종료
+
+4. 함수: 5-6: 객체, objectOriented.js
+
+7. Array: arraySort.js slice(), splice() 8-10: 14장, jQuery

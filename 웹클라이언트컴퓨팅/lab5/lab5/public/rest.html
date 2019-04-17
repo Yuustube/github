@@ -64,7 +64,7 @@ fetch("http://127.0.0.1:52273/user", {
   headers: {
     "Content-Type": "application/x-www-form-urlencoded"
   },
-  body: "name=박영수&region=대전"
+  body: "name=철수&region=대전"
 }).then(function(response) {
           if (response.ok) {
             return response.json(); }
@@ -212,11 +212,21 @@ fetch("http://127.0.0.1:52273/user", {
                 });
             });
             $('#search3').click(function () {
-                var region = $('#region').val();
+            	/*var myvalue = $(":input:radio[name=choice]:checked").val();
+            	var mycolor = (myvalue=='1') ? '#00ff00' :
+            		          (myvalue=='2') ? '#0000ff' : '#ff0000';*/
+
                 $.ajax({
                     url: '/user/',
-                    type: 'get',
+                    type: 'delete',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
                     dataType: 'text',
+                    data: {
+                        region: $('#region').val(),
+                    },
                     success: function (data) {
                         $('#output').val(data);
                     }
@@ -233,7 +243,7 @@ fetch("http://127.0.0.1:52273/user", {
     <button id="get">리스트요청</button>
     <button id="post">데이터생성</button>
     <button id="put">데이터수정</button>
-    <button id="delete">데이터삭제</button>
+    <!---<button id="delete">데이터삭제</button>--->
     <button id="search1">학번으로 찾기</button>
     <!---<button id="search2">이름으로 찾기</button>--->
     <button id="search3">지역 으로 찾기</button>

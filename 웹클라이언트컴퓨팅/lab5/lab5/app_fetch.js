@@ -75,6 +75,31 @@ app.put('/user/:id', (request, response) => {
         // 응답합니다.
         response.status(404).send('데이터가 존재하지 않습니다.');
 });
+
+app.delete('/user/:id', (request, response) => {
+    // 변수를 선언합니다.
+    const id = request.params.id;
+    let deletedUser = null;
+    // 데이터를 제거합니다.
+    for (let i = users.length - 1; i >= 0; i--) {
+        // id가 일치하면
+        if (users[i].id == id) {
+            // 저장 + 제거
+            deletedUser = users[i];
+            users.splice(i, 1);
+            // 더 반복할 필요 없으니 벗어납니다.
+            break;
+        }
+    }
+    // 응답합니다.
+    if (deletedUser)
+        response.send(deletedUser);
+    else
+        response.status(404).send('데이터가 존재하지 않습니다.');
+});
+
+
+/*
 app.get('/user', (request, response) => {
     // 변수를 선언합니다.
     const region = request.params.region;
@@ -86,6 +111,7 @@ app.get('/user', (request, response) => {
     else
         response.status(404).send('데이터가 존재하지 않습니다.');
 });
+
 app.delete('/user', (request, response) => {
   // 변수를 선언합니다.
   const region = request.body.region;
@@ -107,3 +133,4 @@ app.delete('/user', (request, response) => {
       // 응답합니다.
       response.status(404).send('데이터가 존재하지 않습니다.');
 });
+*/

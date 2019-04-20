@@ -167,17 +167,19 @@ fetch("http://127.0.0.1:52273/user", {
             });
 
             $('#delete').click(function () {
+              var id = $('#id').val();
                 $.ajax({
-                    url: '/user',
+                    url: '/user/' + id,
                     type: 'delete',
                     headers: {
                         'Accept': 'application/json',
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/x-www-form-urlencoded'
                     },
                     dataType: 'text',
                     data: {
+                        id: $('#id').val(),
                         name: $('#name').val(),
-                        color: $('#color').val(),
+                        region: $('#region').val()
                     },
                     success: function (data) {
                         $('#output').val(data);
@@ -243,10 +245,10 @@ fetch("http://127.0.0.1:52273/user", {
     <button id="get">리스트요청</button>
     <button id="post">데이터생성</button>
     <button id="put">데이터수정</button>
-    <!---<button id="delete">데이터삭제</button>--->
-    <button id="search1">학번으로 찾기</button>
+    <button id="delete">데이터삭제</button>
+    <button id="search1">사용자찾기</button>
     <!---<button id="search2">이름으로 찾기</button>--->
-    <button id="search3">지역 으로 찾기</button>
+    <!---<button id="search3">지역 으로 찾기</button>--->
 <!--
     <h3>데이터입력</h3>
     <label> 사용자 ID : </label> </label>  <input id="id" size="15" /> <br>

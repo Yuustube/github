@@ -10,4 +10,4 @@
 
 4. 함수: 5-6: 객체, objectOriented.js
 
-7. Array: arraySort.js slice(), splice() 8-10: 14장, jQuery
+7. Array: arraySort.js slice(), splice() 8-10: 14장, jQueryLoopA.html, jQueryAttribute.html, 

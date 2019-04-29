@@ -19,8 +19,8 @@ console.log('- 문자열로 정렬(역순)');
 console.log(arrayA.reverse());
 console.log();
 // 객체 내부의 숫자로 정렬하고 출력합니다.
-arrayB.sort((itemA, itemB) => {
-    return itemA.price - itemB.price;
+arrayB.sort((a, b) => {
+    return a.price - b.price;
 });
 console.log('- 객체 내부의 숫자로 정렬')
 console.log(arrayB);

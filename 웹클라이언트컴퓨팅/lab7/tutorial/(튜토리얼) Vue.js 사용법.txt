@@ -1,0 +1,81 @@
+﻿
+(Vue.js 사용법)
+===============
+
+
+뷰 개발자 도구 설치
+-------------------
+
+  ---> 구글에서 "vue.js devtool" 검색
+
+  ---> 상위 <크롬웹스토어> 링크 클릭 -> 화면 우측위 <Chrome에 추가> 버튼 클릭/설치
+
+
+
+
+Hello Vue.js! HTML 프로그램 생성
+--------------------------------
+
+  ---> 가상대학에서 "tutorial.zip" 다운로드/압축해제
+  ---> "tutorial" 디렉토리 안의 "index.html" 위에서 마우스 더블클릭
+  ---> 브라우저에서 <개발자화면> 열기
+  ---> "URL" 입력창 우측 끝에 있는 "Chrome 맞춤설정 및 제어" 아이콘 클릭
+          --> "도구 더보기"  --> "확장 프로그램"  --> "Vue.js dev tools" 박스 안의 "세부정보" 클릭
+          --> "파일 URL에 대한 액세스 허용" 항목 활성화
+  ---> <개발자메뉴> 우측 끝에 있는 "Vue" 폴더 선택
+
+
+
+
+Hello Vue.js! SPA(Single Page Application) Frontend 프로젝트 생성
+------------------------------------------------------------------
+
+  ---> "tutorial" 디렉토리 안에서 코멘드창 열기
+
+  > mkdir hello_vuejs
+  > cd hello_vuejs
+  
+
+  ---> 뷰 CLI 설치
+
+         > npm install vue-cli -g
+         > vue
+         > vue init webpack-simple
+
+             ? Generate project in current directory? (Y/n) --> Y
+             ? Project name (tutorial) --> hello-vuejs
+             ? Project description (A Vue.js project) --> Hello Vue.js! project
+             ? Author ()  --> (본인이름)
+             ? License (MIT)  --> (엔터키)
+             ? Use sass? (y/N) --> N
+
+
+  ---> 템플릿 프로젝트 설치/실행
+
+         > ls
+         > npm install
+         > npm run dev
+
+              --> Project is running at "http://localhost:8080/"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(실습6)
+-------
+
+적절한 테마를 사용하여 백그라운드 사진들과 메시지들을
+채운다.

@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="asdf.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>

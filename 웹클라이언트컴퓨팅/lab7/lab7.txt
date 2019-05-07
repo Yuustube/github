@@ -1,0 +1,91 @@
+﻿
+1. 개발 프로젝트 생성
+
+    > mkdir vue-todo
+    > cd vue-todo
+    > npm install
+    > npm run dev     // 개발 도중 사용
+
+        Project is running at http://localhost:8080/
+
+    --> 브라우저에서 다음 주소로 접속 테스트
+
+           http://localhost:8080/
+
+
+
+    > npm run build   // 개발완료 후 서버에 설치하는 파일 생성
+
+    > node staticServer.js  // 테스트 서버 실행
+
+        Server running at http://127.0.0.1:52273    
+
+    --> 브라우저에서 다음 주소로 접속 테스트
+
+           http://127.0.0.1:52273
+
+
+
+2. 참조프로그램 실행
+
+    > mkdir vue-todo-with-editing
+    > cd vue-todo-with-editing
+    > npm install
+    > npm run serve    // 개발 중 사용. 임시 서버 구동
+    > npm run build    // 개발 완료 후 서버 호스팅용 프로그램을 "/dist" 안에 압축/완성
+    > npm run lint
+
+    --> <vue-todo>안의 "staticServer.js"를 "vue-todo-with-editing"안에 복사
+
+    --> "staticServer.js" 안의 다음 라인을 수정/저장
+
+            app.use(express.static('.'));  // 수정전
+
+            app.use(express.static('./dist/'));  // 수정후
+
+    > node staticServer.js
+
+
+
+=================================================
+(실습7) "vue-todo" 프로그램에 할일 수정 기능 추가
+=================================================
+
+ "vue-todo" 프로그램에 "vue-todolist-example-master"이 
+  가진 수정기능을 추가할 것
+
+
+
+
+--------------------------------
+(참조설정) Atom 테마/패키지 설정
+--------------------------------
+
+테마
+----
+
+  --> [File -> Settings]
+  --> "Settings" 화면 아래에 있는 [+ Install] 탭 클릭
+  --> [Themes] 버튼 클릭
+  --> 텍스트창에 "seti-ui" 입력
+  --> "seti-ui" 박스 우측의 [Install] 버튼 클릭
+  --> 동일한 요령으로 "atom-material-syntax-dark" 검색/설치
+
+  --> [Themes] 탭 클릭
+  --> [UI Theme] 드롭다운 박스 클릭
+  --> "Seti" 선택
+  --> [Syntax Theme] 드롭다운 박스 클릭
+  --> "Atom Material Dark" 선택
+
+
+패키지
+------
+
+  --> [File -> Settings]
+  --> "Settings" 화면 아래에 있는 [+ Install] 탭 클릭
+  --> [Packages] 버튼 클릭
+  --> 텍스트창에 "language-vue" 입력
+  --> "language-vue" 박스 우측의 [Install] 버튼 클릭
+
+
+

@@ -43,6 +43,14 @@ export default {
     };
   },
   methods: {
+    clearAll() {
+      localStorage.clear();
+      this.todos = [];
+    },
+    removeTodo(todoItem, index) {
+      localStorage.removeItem(todos);
+      this.todos.splice(index, 1);
+    },
     addTodo(todo) {
       this.todos.push(todo);
     }

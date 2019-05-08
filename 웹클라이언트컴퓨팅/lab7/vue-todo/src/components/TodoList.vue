@@ -7,18 +7,44 @@
         <span class="removeBtn" type="button" @click="removeTodo(todoItem, index)">
           <i class="far fa-trash-alt" aria-hidden="true"></i>
         </span>
+        <intput type="text" v-model="editTodo.name" class="form-control" v-if="edit">
+          <span v-else>{{ todoItems.name }}</span>
+          
+        <span class="editBtn" type="button" @click="removeTodo(todoItem, index)">
+          <i class="far fa-edit" aria-hidden="true"></i>
+        </span>
       </li>
     </transition-group>
   </section>
 </template>
 
 <script>
+import TodoItem from "./TodoItem";
+
 export default {
   props: ['propsdata'],
+  data(){
+    return{
+      edit:false,
+      editForm:{
+        name:'',
+        email:''
+      }
+    }
+  },
   methods: {
+    editTodo(){
+      this.edit=true;
+      this.editTodo.name=this.todoItem.name;
+    }
+    cancelEdit(){
+      this.edit=false;
+      this.editTodo.name='';
+    }
     removeTodo(todoItem, index) {
       this.$emit('removeTodo', todoItem, index);
     }
+
   }
 }
 </script>

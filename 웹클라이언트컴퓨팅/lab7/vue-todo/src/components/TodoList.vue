@@ -7,16 +7,19 @@
         <span class="removeBtn" type="button" @click="removeTodo(todoItem, index)">
           <i class="far fa-trash-alt" aria-hidden="true"></i>
         </span>
-        <span class="editBtn" type="button" @click="removeTodo(todoItem, index)">
-          <i class="far fa-edit" aria-hidden="true"></i>
-        </span>
       </li>
+
     </transition-group>
+    <TodoItem
+      v-for="(todo,index) in todoItems"
+      v-bind:todo="todo"
+      v-bind:key="index"
+    />
   </section>
 </template>
 
 <script>
-import TodoItem from "./TodoItem";
+import LabelEdit from 'label-edit'
 
 export default {
   props: ['propsdata'],

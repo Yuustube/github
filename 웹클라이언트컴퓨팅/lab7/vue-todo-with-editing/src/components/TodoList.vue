@@ -5,10 +5,10 @@
       <p>Pending Tasks: {{ todos.filter(todo => { return todo.done === false }).length }}</p>
     </div>
     <TodoItem
-      v-on:delete-todo="deleteTodo" 
+      v-on:delete-todo="deleteTodo"
       v-on:complete-todo="completeTodo" 
-      v-for="(todo,index) in todos" 
-      v-bind:todo="todo" 
+      v-for="(todo,index) in todos"
+      v-bind:todo="todo"
       v-bind:key="index"
     />
   </div>

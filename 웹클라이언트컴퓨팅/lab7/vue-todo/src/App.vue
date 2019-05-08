@@ -3,6 +3,8 @@
     <TodoHeader></TodoHeader>
     <TodoInput v-on:addTodo="addTodo"></TodoInput>
     <TodoList v-bind:propsdata="todoItems" @removeTodo="removeTodo"></TodoList>
+    <TodoList v-bind:todos="todoItems"/>
+    <CreateTodo v-on:create-todo="addTodo"/>
 
 
     <TodoFooter v-on:removeAll="clearAll"></TodoFooter>

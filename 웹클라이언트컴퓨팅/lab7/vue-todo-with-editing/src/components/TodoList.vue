@@ -6,7 +6,7 @@
     </div>
     <TodoItem
       v-on:delete-todo="deleteTodo"
-      v-on:complete-todo="completeTodo" 
+      v-on:complete-todo="completeTodo"
       v-for="(todo,index) in todos"
       v-bind:todo="todo"
       v-bind:key="index"

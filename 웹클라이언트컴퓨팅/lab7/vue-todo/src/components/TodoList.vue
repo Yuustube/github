@@ -7,6 +7,10 @@
         <span class="removeBtn" type="button" @click="removeTodo(todoItem, index)">
           <i class="far fa-trash-alt" aria-hidden="true"></i>
         </span>
+        <div class="hello">
+        <h3>Text Box 1 with default text and place holder</h3>
+        <label-edit :text="text" id="propsdata" v-on:text-updated="textUpdated" placeholder="Enter some text"></label-edit>
+    </div>
       </li>
 
     </transition-group>
@@ -23,12 +27,19 @@ import LabelEdit from 'label-edit'
 
 export default {
   props: ['propsdata'],
+  components: {
+  LabelEdit,
+  },
   methods: {
     removeTodo(todoItem, index) {
       this.$emit('removeTodo', todoItem, index);
-    }
+    },
 
+    textUpdated: function(text){
+      this.text = text;
+    }
   }
+
 }
 </script>
 
